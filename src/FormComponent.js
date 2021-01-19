@@ -1,11 +1,17 @@
-import React, { Component, useState } from 'react';
+import React, {useState } from 'react';
 
-export default class FormComponent extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
-}
+const FormComponent = props => {
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    return (
+        <div>
+            
+        </div>
+    );
+};
+
+export default FormComponent;
+
