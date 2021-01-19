@@ -9,7 +9,7 @@ const FormComponent = props => {
     const createUser = (e) => {
         e.preventDefault()
         const newUser = {firstName, lastName, email, password};
-        console.log(`${newUser}, created!`);
+        console.log(`user ${newUser.firstName}, created!`);
         setFirstName("");
         setLastName("");
         setPassword("");
@@ -44,6 +44,8 @@ const FormComponent = props => {
                 </div>
 
             </form>
+
+
         </div>
     );
 };
