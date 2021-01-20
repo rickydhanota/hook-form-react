@@ -1,24 +1,17 @@
-import React, {useState } from 'react';
+import React from 'react';
 
 const FormComponent = props => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
 
-    const createUser = (e) => {
+    const {firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword, renderform, setRenderForm} = props;
+
+    const onSubmit = (e) => {
         e.preventDefault()
-        const newUser = {firstName, lastName, email, password};
-        console.log(`user ${newUser.firstName}, created!`);
-        setFirstName("");
-        setLastName("");
-        setPassword("");
-        setEmail("");
+        setRenderForm(true)
     }
 
     return (
         <div>
-            <form onSubmit = {createUser}>
+            <form onSubmit = {onSubmit}>
                 <div className = "firstName">
                     <label>First Name</label>
                     <input type = "text" onChange = {(e) => setFirstName(e.target.value)}  value = {firstName} />
